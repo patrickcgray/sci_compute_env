@@ -62,4 +62,4 @@ Make sure you generate training, validation, and testing splits of your dataset.
 
 Repeat 9 and 10 until happy.
 
-11. Now run the model on your whole dataset.
+12. Now run the model on your whole dataset and finally get the products that are motivating this whole analysis.
