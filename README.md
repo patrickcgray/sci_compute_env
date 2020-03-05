@@ -15,9 +15,9 @@ git clone https://github.com/patrickcgray/uas_obj_detection.git
 cd sci_compute_env
 ```
 
-5. Create a Docker Image and Container based on the Dockerfile in the repo. The `-p` makes that port on the Docker container visible on the host machine and the `-v` does a same for a specifc volume, so basically you're passing those through from the VM to your host.
+5. Create a Docker Image and Container based on the Dockerfile in the repo. The `-p` makes that port on the Docker container visible on the host machine and the `-v` does a same for a specifc volume, so basically you're passing those through from the VM to your host. If you're building a deep learning environment change `Dockerfile` to `DockerfileGPU` or just use your own Dockerfile that you've written.
 ```
-docker build -t <img_name> .
+docker build -t <img_name> Dockerfile
 docker run --name <cont_name> -it -p 8888:8888 -p 6006:6006 -v ~/:/host <img_name>
 ```
 Your Docker image is now built and you instantiated a container from that image that is now running. Exit that container (which also stops it).
